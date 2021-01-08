@@ -29,7 +29,7 @@ label {
 }
 
 .container {
-    max-width: 1413px;
+    padding: 0 28px;
     margin: auto;
 }
 
@@ -229,6 +229,10 @@ header .navbar ul li a.active::before {
     align-items: center;
 }
 
+.search-active {
+    display: none;
+}
+
 .search-text::placeholder {
     color: #dcdde0;
     font-size: 13px;
@@ -293,8 +297,8 @@ header .navbar ul li a.active::before {
 .home {
     min-height: 100vh;
     background-attachment: fixed;
-    /*background-image: url(./img/fondo-antony.png);*/
-    background: #1d1d1d;
+    background-image: url(./img/fondo-antony.png);
+   /* background: #1d1d1d;*/
     background-size: cover;
     background-position: center;
     padding: 15px;
@@ -319,13 +323,14 @@ header .navbar ul li a.active::before {
 .home .home-content {
     flex: 0 0 100%;
     max-width: 100%;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
 .home .home-content .block {
-    flex: 0 0 25%;
+    flex: 0 0 41%;
     max-width: 75%;
     padding-left: 26px;
     border-left: 5px solid #DCDDE0;
@@ -344,9 +349,10 @@ header .navbar ul li a.active::before {
 
 .home .home-content .block h1 {
     color: #DCDDE0;
-    font-size: 52px;
+    /*font-size: 52px;*/
+    font-size: clamp(40px, 5vw, 70px);
     /*font-weight: 800;*/
-    line-height: 56px;
+    line-height: 65px;
     font-family: 'Londrina Solid', cursive;
     margin: 0;
     padding: 0;
@@ -358,7 +364,7 @@ header .navbar ul li a.active::before {
     color: #515152;
     font-size: 15px;
     position: absolute;
-    margin-top: -40px;
+    margin-top: -50px;
     margin-left: -16px;
 }
 
@@ -368,7 +374,7 @@ header .navbar ul li a.active::before {
     color: #515152;
     font-size: 15px;
     position: absolute;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 18px;
 }
 
@@ -451,11 +457,12 @@ header .navbar ul li a.active::before {
 }
 
 .listado {
+    z-index: 9;
     display: flex;
     font-style: italic;
     position: fixed;
     bottom: 138px;
-    right: 18%;
+    right: 10%;
 }
 
 .ver-link a {
@@ -500,14 +507,395 @@ header .navbar ul li a.active::before {
 /*end listas de iconos*/
 
 .guitarra {
-    width: 58%;
-    margin-left: 8rem;
+    width: 40rem;
+    margin-left: 3rem;
 }
 .guitar {
     transform: rotate(-8deg);
     /*width: 855px;
     height: 600px;*/
-    width: 100%;
+    width: 110%;
+}
+
+
+.ham-burger {
+    font-size: 20px;
+    display: none;
+    color: #000;
+    height: 30px;
+    width: 35px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+.ham-burger .header__menu span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #000;
+    transition: all 300ms ease-in-out;
+    transform-origin: 3px 1px;
+}
+
+.ham-burger .header__menu span:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+.ham-burger.open span:first-child {
+    transform: rotate(38deg);
+    margin-left: 3.5px;
+}
+
+.ham-burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-burger.open span:last-child {
+    transform: rotate(-38deg);
+    margin-left: 3.5px;
+}
+
+
+.activalo {
+    display: none;
+}
+
+
+
+
+@keyframes fixHeaderLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/*====== RESPONSIVE ======*/
+@media only screen and (max-width: 1466px) {
+    .guitarra {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .home .home-content .block h1 {
+        line-height: 51px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .guitarra {
+        margin-left: 0rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .home .home-content .block {
+        flex:  0 0 50%;
+        margin-left: 35px;
+        border-left: 4px solid #DCDDE0;
+    }
+
+    .home .home-content .block h1 {
+        line-height: 51px;
+    }
+
+    .listado {
+        bottom: 100px;
+    }
+
+    .ver-link a {
+        height: 60px;
+        width: 60px;
+    }
+
+    .ver-link a .play-icon {
+        margin-top: 16px;
+        font-size: 23px;
+    }
+
+    .listado h3 {
+        font-size: 19px;
+    }
+
+    .list-icons li a svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .home .home-content .block a {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .listas {
+        display: none;
+    }
+
+    .home .home-content {
+        justify-content: end;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .home .home-content .block h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .hide-desktop {
+        display: inline-block;
+    }
+
+    .ham-burger {
+        display: inline-block;
+    }
+    
+    .home .home-content .block h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    
+    .home .home-content .block h3 {
+        font-size: 10px;
+    }
+    
+    .home .home-content .block a {
+        font-size: 10px;
+        padding: 9px 18px;
+    }
+    
+    header {
+        padding: 12px 10px;
+        position: fixed;
+        background-color: #f8f8f8;
+        border: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .navbar li a:hover {
+        color: #E91E63;
+        transform: translateY(110%);
+    }
+    
+    /*header .brand-name a {
+        color: #333;
+        font-size: 19px;
+    }*/
+
+    header .brand {
+        margin: 0 auto;
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .activalo {
+        display: block;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .search-active {
+        cursor: pointer;
+        margin-top: 45%;
+        margin-inline: auto;
+        display: block;
+        width: 250px;
+        height: 40px;
+        border: 1px solid #a5a1a1;
+        border-radius: 40px;
+        padding: 0 10px 0px 14px;
+        transition: all .5s ease;
+    }
+
+    .search-active:hover {
+        background: #d2d1d1;
+        border: 1px solid #d2d1d1;
+        box-shadow: 0px 3px 26px #21252957;
+    }
+
+    .search-btn {
+        color: #000;
+        float: right;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-text::placeholder {
+        color: #a5a1a1;
+        font-size: 13px;
+    }
+
+    .search-text {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: #000;
+        font-size: 13px;
+        transition: 0.4s;
+        line-height: 40px;
+        /*width: 0px;*/
+    }
+
+    .activalo a {
+        /*box-shadow: 6px 6px 30px #212529;*/
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+        display: inline-block;
+        border: 1px solid #212529;
+        line-height: 28px;
+        text-align: center;
+        margin: 0 1px;
+        transition: all .5s ease;
+    }
+
+    .activalo a:hover {
+        background-color: #212529;
+        box-shadow: 0px 0px 10px #212529;
+    }
+
+    .activalo a .user-icon {
+        color: #212529;
+        margin-top: 10px;
+        font-size: 14px;
+        transition: all .5s ease;
+    }
+
+    .activalo a:hover .fal{
+        color: #ebebeb;
+    }
+
+    header .brand .logo {
+        width: 32px;
+        display: block;
+    }
+    
+    header .brand .logos {
+        display: none;
+    }
+    
+    .ham-burger .fa {
+        display: inline-block;
+    }
+    
+    .navbar {
+        position: absolute;
+        background-color: #f8f8f8;
+        width: 100%;
+        min-height: 80rem;
+        left: -100%;
+        top: 57px;
+        padding: 15px;
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        transition: .5s;
+    }
+    
+    .navbar.show {
+        left: 0;
+    }
+    
+    header .navbar ul li {
+        display: block;
+        margin-left: 0;
+    }
+    
+    header .navbar ul li a {
+        line-height: 48px;
+        text-align: center;
+        transform: translateY(125%);
+        color: #000;
+    }
+    
+    header .navbar ul li a::before {
+        background-color: #febd01;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .guitarra {
+        display: none;
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+    .home .home-content .block {
+        flex: 0 0 100%;
+        max-width: none;
+        margin-left: 0px;
+        padding-left: 15px;
+    }
+
+    .ver-link a {
+        height: 50px;
+        width: 50px;
+    }
+
+    .ver-link a .play-icon {
+        margin-top: 14px;
+        font-size: 18px;
+    }
+
+    .listado h3 {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .home .home-content .block h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    
+    .home .home-content .block h3 {
+        font-size: 8px;
+    }
+
+    .home .home-content .block a {
+        font-size: 9px;
+        font-weight: 800;
+        border: 1px solid;
+        padding: 8px 13px;
+        margin-top: 25px;
+    }
+
+    .listado {
+        right: 33%;
+        bottom: 60px;
+    }
+
+    .home .home-content .block h1:before {
+        margin-top: -30px;
+    }
+
+    .home .home-content .block h1:after {
+        margin-top: 8px;
+        margin-left: 15px;
+    }
 }
 
 
