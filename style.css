@@ -293,8 +293,8 @@ header .navbar ul li a.active::before {
 .home {
     min-height: 100vh;
     background-attachment: fixed;
-    background-image: url(./img/fondo-antony.png);
-   /* background: #1d1d1d;*/
+    /*background-image: url(./img/fondo-antony.png);*/
+    background: #1d1d1d;
     background-size: cover;
     background-position: center;
     padding: 15px;
