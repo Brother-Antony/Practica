@@ -1,0 +1,522 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+p,
+li,
+a,
+label {
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1413px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.section-title h1 {
+    display: inline-block;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.section-title h1:before {
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 2px;
+    right: 30%;
+    background-color: #febd01;
+    bottom: 0px;
+}
+
+header {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    transition: all .5s ease;
+    padding: 0px 15px;
+    z-index: 10;
+}
+
+header.fixed {
+    background-color: #f8f8f8;
+    position: fixed;
+    border-color: #eeeeee;
+    animation: fixHeader .5s ease;
+}
+
+header.fixed .brand .logos {
+    display: none;
+}
+
+header.fixed .brand .logo {
+    display: block;
+    width: 130px;
+    transition: .5s ease;
+}
+
+header .brand .logo {
+    display: none;
+}
+
+.logos {
+    display: block;
+    width: 38px;
+}
+
+header .brand {
+    position: relative;
+}
+
+@keyframes fixHeader {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(-0%);
+    }
+}
+
+header .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+header .brand-name a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fcfcfc;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header.fixed .brand-name a {
+    color: #000;
+}
+*/
+
+.navbar {
+    margin-inline-end: auto;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .navbar ul li {
+    display: inline-block;
+    margin-left: 35px;
+}
+
+header .navbar ul li a {
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    line-height: 72px;
+    color: #dcdde0;
+    display: block;
+    font-weight: 500;
+    position: relative;
+    transition: all .5s ease;
+}
+
+header.fixed .navbar ul li a {
+    color: #000;
+}
+
+/*header .navbar ul li a::before {
+    content: '';
+    height: 3px;
+    background-color: #dcdde0;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+
+header.fixed .navbar ul li a::before {
+    background-color: #febd01;
+}
+
+header .navbar ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+header .navbar ul li a.active::before {
+    width: 100%;
+    left: 0;
+}*/
+
+.navbar li a:hover, .navbar li a:focus {
+    color: #08fdd8;
+    transform: translateY(-3px);
+}
+
+.box-caja {
+    display: flex;
+}
+
+.box-caja .search-box {
+    margin-right: 35px;
+}
+
+.search-box {
+    cursor: pointer;
+    background: #D95876;
+    box-shadow: 0px 3px 26px #21252957;
+    width: 250px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 0 10px 0px 14px;
+    /*padding: 0;*/
+}
+
+/*.search-box:hover > .search-text {
+    width: 240px;
+    padding: 0 10px 0px 14px;
+}*/
+
+.search-btn {
+    color: #dcdde0;
+    float: right;
+    width: 40px;
+    height: 40px;
+/*    border-radius: 50%;
+    background: #2f3640;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-text::placeholder {
+    color: #dcdde0;
+    font-size: 13px;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #F3F3F2;
+    font-size: 13px;
+    transition: 0.4s;
+    line-height: 40px;
+    /*width: 0px;*/
+}
+
+.social-links a {
+    height: 38px;
+    width: 38px;
+    /*box-shadow: 6px 6px 30px #212529;*/
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #dcdde0;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 1px;
+    transition: all .5s ease;
+}
+
+.social-links a:hover {
+    background-color: #dcdde0;
+    box-shadow: 0px 3px 26px #2125298c;
+}
+
+.social-links a .user-icon {
+    color: #ebebeb;
+    margin-top: 9px;
+    font-size: 17px;
+    transition: all .5s ease;
+}
+
+.social-links a:hover .fal{
+    color: #212529;
+}
+
+/*.social-links a:hover .fad{
+    color: #212529;
+}
+
+.social-links a:hover .far{
+    color: #212529;
+}
+
+.social-links a:hover .fad{
+    color: #212529;
+}*/
+
+/* home */
+.home {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-image: url(./img/fondo-antony.png);
+   /* background: #1d1d1d;*/
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+}
+
+/*.home:after {
+        content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(0deg,#101010 0,transparent);
+}*/
+
+.home .full-screen {
+    min-height: 90vh;
+}
+
+.home .home-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home .home-content .block {
+    flex: 0 0 25%;
+    max-width: 75%;
+    padding-left: 26px;
+    border-left: 5px solid #DCDDE0;
+    border-radius: 2px;
+    margin-top: 50px;
+    margin-left: 75px;
+}
+
+.home .home-content .block h6 {
+    color: #dcdde0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.home .home-content .block h1 {
+    color: #DCDDE0;
+    font-size: 52px;
+    /*font-weight: 800;*/
+    line-height: 56px;
+    font-family: 'Londrina Solid', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.home .home-content .block h1:before {
+    content: '<h1>';
+    font-family: 'La Belle Aurore', cursive;
+    color: #515152;
+    font-size: 15px;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: -16px;
+}
+
+.home .home-content .block h1:after {
+    content: '<h1/>';
+    font-family: 'La Belle Aurore', cursive;
+    color: #515152;
+    font-size: 15px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 18px;
+}
+
+.home .home-content .block h3 {
+    /*color: #8d8d8d;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;*/
+    color: #8d8d8d;
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 11px;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 3px;
+}
+
+.home .home-content .block a {
+    color: #08fdd8;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 2px solid #08fdd8;
+    border-radius: 15px;
+    margin-top: 35px;
+    float: left;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.home .home-content .block a:hover {
+    color: #000;
+    box-shadow: 0 0 0 2em #08fdd8 inset;
+}
+
+/*start listas de iconos*/
+.listas {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    right: auto;
+    text-align: center;
+}
+
+.list-icons {
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.list-icons li {
+    padding: 10px;
+}
+
+.medir:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background: #a8b2d1; 
+}
+
+.list-icons li a svg {
+    width: 20px;
+    height: 20px;
+    color: #a8b2d1;
+    transition: all .5s ease;
+}
+
+.list-icons li a svg:hover, .list-icons li a svg:focus {
+    color: #08fdd8;
+    transform: translateY(-3px);
+}
+
+.listado {
+    display: flex;
+    font-style: italic;
+    position: fixed;
+    bottom: 138px;
+    right: 18%;
+}
+
+.ver-link a {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #dcdde0;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 1px;
+    transition: all .5s ease;
+}
+
+.ver-link a:hover {
+    background-color: #dcdde0;
+    box-shadow: 0px 3px 26px #2125298c;
+}
+
+.ver-link a .play-icon {
+    color: #ebebeb;
+    margin-left: 5px;
+    margin-top: 19px;
+    font-size: 27px;
+    transition: all .5s ease;
+}
+
+.ver-link a:hover .fas{
+    color: #212529;
+}
+
+.ver-link {
+    margin-right: 6px;
+}
+
+.listado h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #F3F3F2;
+}
+/*end listas de iconos*/
+
+.guitarra {
+    width: 58%;
+    margin-left: 8rem;
+}
+.guitar {
+    transform: rotate(-8deg);
+    /*width: 855px;
+    height: 600px;*/
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
