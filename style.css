@@ -204,12 +204,18 @@ header .navbar ul li a.active::before {
 .search-box {
     cursor: pointer;
     background: #D95876;
-    box-shadow: 0px 3px 26px #21252957;
+    border: 1px solid #b53c5c;
+    /*box-shadow: 0px 3px 26px #21252957;*/
     width: 250px;
     height: 40px;
     border-radius: 40px;
     padding: 0 10px 0px 14px;
+    transition: all .5s ease;
     /*padding: 0;*/
+}
+
+.search-box:hover {
+    box-shadow: 0px 3px 26px #21252957;
 }
 
 /*.search-box:hover > .search-text {
@@ -272,12 +278,14 @@ header .navbar ul li a.active::before {
 
 .social-links a .user-icon {
     color: #ebebeb;
-    margin-top: 9px;
+    font-weight: 400;
+    margin-top: 8px;
     font-size: 17px;
     transition: all .5s ease;
 }
 
 .social-links a:hover .fal{
+    font-weight: 700;
     color: #212529;
 }
 
@@ -459,10 +467,16 @@ header .navbar ul li a.active::before {
 .listado {
     z-index: 9;
     display: flex;
+    /*display: flex;
     font-style: italic;
     position: fixed;
     bottom: 138px;
-    right: 10%;
+    right: 10%;*/
+    position: fixed;
+    bottom: 0;
+    margin: 100px;
+    right: 44px;
+    text-align: center;
 }
 
 .ver-link a {
@@ -698,6 +712,11 @@ header .navbar ul li a.active::before {
         margin: 0 auto;
         border: 1px solid #000;
         border-radius: 50%;
+        transition: all .5s ease;
+    }
+    
+    header .brand:hover {
+        box-shadow: 0px 0px 10px #212529;
     }
 
     .social-links {
@@ -719,20 +738,19 @@ header .navbar ul li a.active::before {
         display: block;
         width: 250px;
         height: 40px;
-        border: 1px solid #a5a1a1;
+        border: 1px solid rgba(32,33,36,0.149);
         border-radius: 40px;
         padding: 0 10px 0px 14px;
         transition: all .5s ease;
     }
 
     .search-active:hover {
-        background: #d2d1d1;
-        border: 1px solid #d2d1d1;
-        box-shadow: 0px 3px 26px #21252957;
+       /* background: #d2d1d1;*/
+        box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
     }
 
     .search-btn {
-        color: #000;
+        color: #a5a1a1;
         float: right;
         width: 40px;
         height: 40px;
@@ -780,7 +798,8 @@ header .navbar ul li a.active::before {
 
     .activalo a .user-icon {
         color: #212529;
-        margin-top: 10px;
+        font-weight: 400;
+        margin-top: 9px;
         font-size: 14px;
         transition: all .5s ease;
     }
@@ -790,7 +809,7 @@ header .navbar ul li a.active::before {
     }
 
     header .brand .logo {
-        width: 32px;
+        width: 33px;
         display: block;
     }
     
