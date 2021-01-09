@@ -473,10 +473,8 @@ header .navbar ul li a.active::before {
     bottom: 138px;
     right: 10%;*/
     position: fixed;
-    bottom: 0;
-    margin: 100px;
-    right: 44px;
-    text-align: center;
+    bottom: 80px;
+    right: 45px;
 }
 
 .ver-link a {
@@ -621,10 +619,6 @@ header .navbar ul li a.active::before {
 
     .home .home-content .block h1 {
         line-height: 51px;
-    }
-
-    .listado {
-        bottom: 100px;
     }
 
     .ver-link a {
@@ -902,10 +896,6 @@ header .navbar ul li a.active::before {
         margin-top: 25px;
     }
 
-    .listado {
-        right: 33%;
-        bottom: 60px;
-    }
 
     .home .home-content .block h1:before {
         margin-top: -30px;
