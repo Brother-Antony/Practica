@@ -526,7 +526,7 @@ header .navbar ul li a.active::before {
     transform: rotate(-8deg);
     /*width: 855px;
     height: 600px;*/
-    width: 110%;
+    width: 100%;
 }
 
 
