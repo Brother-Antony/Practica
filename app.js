@@ -1,4 +1,7 @@
 
+function validaEdad() {
+	alert("Todavia no esta lista, porfavor espere unos dias mas!!");
+}
 
 // Hamburger
 const hamBurger = document.querySelector(".ham-burger");
