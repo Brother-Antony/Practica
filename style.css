@@ -5,6 +5,10 @@ html {
     scroll-behavior: smooth;
 }
 
+/*fondo puro de css es :
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(20,18,18,1) 58%, rgba(139,6,58,1) 96%);*/
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -71,23 +75,6 @@ header {
     transition: all .5s ease;
     padding: 0px 15px;
     z-index: 10;
-}
-
-header.fixed {
-    background-color: #f8f8f8;
-    position: fixed;
-    border-color: #eeeeee;
-    animation: fixHeader .5s ease;
-}
-
-header.fixed .brand .logos {
-    display: none;
-}
-
-header.fixed .brand .logo {
-    display: block;
-    width: 130px;
-    transition: .5s ease;
 }
 
 header .brand .logo {
@@ -159,10 +146,6 @@ header .navbar ul li a {
     transition: all .5s ease;
 }
 
-header.fixed .navbar ul li a {
-    color: #000;
-}
-
 /*header .navbar ul li a::before {
     content: '';
     height: 3px;
@@ -203,7 +186,7 @@ header .navbar ul li a.active::before {
 
 .search-box {
     cursor: pointer;
-    background: #D95876;
+    background: #d95876b8;
     border: 1px solid #b53c5c;
     /*box-shadow: 0px 3px 26px #21252957;*/
     width: 250px;
@@ -215,6 +198,7 @@ header .navbar ul li a.active::before {
 }
 
 .search-box:hover {
+    background: #D95876;
     box-shadow: 0px 3px 26px #21252957;
 }
 
@@ -284,7 +268,7 @@ header .navbar ul li a.active::before {
     transition: all .5s ease;
 }
 
-.social-links a:hover .fal{
+.social-links a:hover .far{
     font-weight: 700;
     color: #212529;
 }
@@ -526,7 +510,7 @@ header .navbar ul li a.active::before {
     transform: rotate(-8deg);
     /*width: 855px;
     height: 600px;*/
-    width: 100%;
+    width: 110%;
 }
 
 
@@ -692,7 +676,7 @@ header .navbar ul li a.active::before {
         border-bottom: 1px solid #eeeeee;
     }
 
-    .navbar li a:hover {
+    .navbar li a:hover, .navbar li a:focus {
         color: #E91E63;
         transform: translateY(110%);
     }
@@ -727,7 +711,7 @@ header .navbar ul li a.active::before {
 
     .search-active {
         cursor: pointer;
-        margin-top: 45%;
+        margin-top: 35%;
         margin-inline: auto;
         display: block;
         width: 250px;
@@ -787,7 +771,6 @@ header .navbar ul li a.active::before {
 
     .activalo a:hover {
         background-color: #212529;
-        box-shadow: 0px 0px 10px #212529;
     }
 
     .activalo a .user-icon {
@@ -798,7 +781,7 @@ header .navbar ul li a.active::before {
         transition: all .5s ease;
     }
 
-    .activalo a:hover .fal{
+    .activalo a:hover .far{
         color: #ebebeb;
     }
 
